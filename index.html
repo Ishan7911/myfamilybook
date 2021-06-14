@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>My Family Book</title>  
+</head>
+ <body>
+     <center>
+    <img src="https://themasonfamilyonline.com/wp-content/uploads/2020/01/A-Family-Unit.jpg"
+    style="width:30%;" id="family_member_image">
+    <h4 id="family_member_name"></h4>
+    <button onclick="update();">Next</button>
+</body>
+</center> 
+<script>
+    var images=["https://themasonfamilyonline.com/wp-content/uploads/2020/01/A-Family-Unit.jpg","file:///Users/ishansatia/Downloads/Image%2014-06-21%20at%201.42%20PM.jpg","https://media-exp3.licdn.com/dms/image/C5603AQE5whGh0FoSzQ/profile-displayphoto-shrink_200_200/0/1589092267894?e=1628121600&v=beta&t=8I8frYXUXDSZ39lj3XJ2KzZCB76EXslSJGuvQNJbhM0","https://media-exp1.licdn.com/dms/image/C4D03AQEo6JuORbu4zA/profile-displayphoto-shrink_200_200/0/1605079785743?e=1628121600&v=beta&t=CdAnnIHkcnA0WoL-9DuxkM4masVn6YDWqTDSbJML9Gw"];
+var names=["Family Book","Ishan Satia","Rahul Satia","Mallika Satia"];
+
+var i=0;
+function update()
+{
+    i++
+    var numbers_of_family_member_in_array=5
+    if(i> numbers_of_family_member_in_array)
+    {
+        i=0;   
+    }
+    var updatedImage = images[i];
+    var updatedName = names[i];
+    document.getElementById("family_member_image").src = updatedImage;
+    document.getElementById("family_member_name").innerHTML = updatedName;
+}
+</script> 
+</html>
